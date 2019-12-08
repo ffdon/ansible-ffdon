@@ -49,6 +49,7 @@
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
 # 'server' im Kommentar muss angegeben werden, wenn mehrere L2TP-VM auf einem Blech laufen. Der Wert kann frei gewählt werden.
 [gateways]
+gw06      ipv4=94.130.153.144 ipv6=2a01:4f8:150:308d::106 ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22
 ##tj01			ipv4=176.9.176.92	ipv6=2a01:4f8:151:112b::4		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> BCKB	capacity=1.00	server=battleaxegaming
 ##parad0x			ipv4=94.130.64.196	ipv6=2a01:4f8:10b:2e6f::100		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> FFRL	capacity=1.00	server=hyperhost
 ##c1024			ipv4=176.9.88.123	ipv6=2a01:4f8:150:8ff8::5		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00
