@@ -1,78 +1,78 @@
 # Allgemeine Infrastruktur-Server
 [common]
-ansible			ansible_ssh_host=46.4.80.179		ansible_ssh_port=224
-unifi			ansible_ssh_host=2a03:2260:115:4300:5054:ff:fe9a:97b1		ansible_ssh_port=22
-unifi-legacy		ansible_ssh_host=2a03:2260:115:4300:5054:ff:fefe:680f		ansible_ssh_port=22
-aircontrol		ansible_ssh_host=2a03:2260:115:1600:5054:ff:fecf:b2fb		ansible_ssh_port=22
-mail			ansible_ssh_host=148.251.208.169	ansible_ssh_port=22
-wiki			ansible_ssh_host=5.9.86.142		ansible_ssh_port=22
-forum			ansible_ssh_host=148.251.208.171	ansible_ssh_port=22
-streamer		ansible_ssh_host=46.4.80.179		ansible_ssh_port=222
-faa-vm-backup		ansible_ssh_host=2a03:2260:115:100:5054:ff:fe73:a614		ansible_ssh_port=22
-lafp-vm-backup		ansible_ssh_host=2a03:2260:115:400:5054:ff:fe96:b854		ansible_ssh_port=22
-zulip			ansible_ssh_host=46.4.80.186		ansible_ssh_port=22
-ldap			ansible_ssh_host=2a01:4f8:162:10d2::a2	ansible_ssh_port=22
-fredbackend		ansible_ssh_host=159.69.223.64		ansible_ssh_port=22
-projekt			ansible_ssh_host=176.9.38.158		ansible_ssh_port=22
-nextcloud		ansible_ssh_host=185.197.132.147	ansible_ssh_port=22
+##ansible			ansible_ssh_host=46.4.80.179		ansible_ssh_port=224
+##unifi			ansible_ssh_host=2a03:2260:115:4300:5054:ff:fe9a:97b1		ansible_ssh_port=22
+##unifi-legacy		ansible_ssh_host=2a03:2260:115:4300:5054:ff:fefe:680f		ansible_ssh_port=22
+##aircontrol		ansible_ssh_host=2a03:2260:115:1600:5054:ff:fecf:b2fb		ansible_ssh_port=22
+##mail			ansible_ssh_host=148.251.208.169	ansible_ssh_port=22
+##wiki			ansible_ssh_host=5.9.86.142		ansible_ssh_port=22
+##forum			ansible_ssh_host=148.251.208.171	ansible_ssh_port=22
+##streamer		ansible_ssh_host=46.4.80.179		ansible_ssh_port=222
+##faa-vm-backup		ansible_ssh_host=2a03:2260:115:100:5054:ff:fe73:a614		ansible_ssh_port=22
+##lafp-vm-backup		ansible_ssh_host=2a03:2260:115:400:5054:ff:fe96:b854		ansible_ssh_port=22
+##zulip			ansible_ssh_host=46.4.80.186		ansible_ssh_port=22
+##ldap			ansible_ssh_host=2a01:4f8:162:10d2::a2	ansible_ssh_port=22
+##fredbackend		ansible_ssh_host=159.69.223.64		ansible_ssh_port=22
+##projekt			ansible_ssh_host=176.9.38.158		ansible_ssh_port=22
+##nextcloud		ansible_ssh_host=185.197.132.147	ansible_ssh_port=22
 
 [hypervisors]
 #fanLinvirthost		ansible_ssh_host=	TODO		ansible_ssh_port=22	# Kein Zugriff!
 #hyperhost		ansible_ssh_host=	TODO		ansible_ssh_port=22	# Kein Zugriff!
-deshyper-01		ansible_ssh_host=5.9.86.151		ansible_ssh_port=22
-remue			ansible_ssh_host=144.76.30.226		ansible_ssh_port=22
-hypercorn		ansible_ssh_host=144.76.69.37		ansible_ssh_port=22	# Kein Zugriff!
-unimatrixzero		ansible_ssh_host=176.9.38.150		ansible_ssh_port=22
-voyager			ansible_ssh_host=46.4.80.179		ansible_ssh_port=22
-tj7-hyper		ansible_ssh_host=176.9.77.90		ansible_ssh_port=22	# Kein Zugriff!
-robweisor-01		ansible_ssh_host=78.46.85.242		ansible_ssh_port=22	# Kein Zugriff!
-goldelse		ansible_ssh_host=217.197.83.217		ansible_ssh_port=22
-obelix			ansible_ssh_host=45.152.127.50		ansible_ssh_port=22
+##deshyper-01		ansible_ssh_host=5.9.86.151		ansible_ssh_port=22
+##remue			ansible_ssh_host=144.76.30.226		ansible_ssh_port=22
+##hypercorn		ansible_ssh_host=144.76.69.37		ansible_ssh_port=22	# Kein Zugriff!
+##unimatrixzero		ansible_ssh_host=176.9.38.150		ansible_ssh_port=22
+##voyager			ansible_ssh_host=46.4.80.179		ansible_ssh_port=22
+##tj7-hyper		ansible_ssh_host=176.9.77.90		ansible_ssh_port=22	# Kein Zugriff!
+##robweisor-01		ansible_ssh_host=78.46.85.242		ansible_ssh_port=22	# Kein Zugriff!
+##goldelse		ansible_ssh_host=217.197.83.217		ansible_ssh_port=22
+##obelix			ansible_ssh_host=45.152.127.50		ansible_ssh_port=22
 
 # Server für Hoppglas Karten
 [mapserver]
-karte			ipv4=46.4.80.190	ipv6=2a01:4f8:140:616e::83	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22
-testkarte		ipv4=78.46.117.231	ipv6=2a01:4f8:1c0c:6b7e::1	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22 #Nur für Tests!
+##karte			ipv4=46.4.80.190	ipv6=2a01:4f8:140:616e::83	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22
+##testkarte		ipv4=78.46.117.231	ipv6=2a01:4f8:1c0c:6b7e::1	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22 #Nur für Tests!
 
 # Server für Statistiken mittels Graphite und Grafana
 [statistics]
-stats		ansible_ssh_host=185.197.132.146	ansible_ssh_port=22
+##stats		ansible_ssh_host=185.197.132.146	ansible_ssh_port=22
 
 # Server die diverse Dienste anbieten.
 [dienste]
-webserver		ansible_ssh_host=46.4.80.179		ansible_ssh_port=223
-ticket			ansible_ssh_host=5.9.86.151		ansible_ssh_port=223
-dnsmaster		ansible_ssh_host=176.9.38.163		ansible_ssh_port=22
-mumble                  ansible_ssh_host=46.4.80.179            ansible_ssh_port=225
+##webserver		ansible_ssh_host=46.4.80.179		ansible_ssh_port=223
+##ticket			ansible_ssh_host=5.9.86.151		ansible_ssh_port=223
+##dnsmaster		ansible_ssh_host=176.9.38.163		ansible_ssh_port=22
+##mumble                  ansible_ssh_host=46.4.80.179            ansible_ssh_port=225
 
 # Multidomänen-L2TP Gateways mit oder ohne Direktanbindung FFRL
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
 # 'server' im Kommentar muss angegeben werden, wenn mehrere L2TP-VM auf einem Blech laufen. Der Wert kann frei gewählt werden.
 [gateways]
-tj01			ipv4=176.9.176.92	ipv6=2a01:4f8:151:112b::4		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> BCKB	capacity=1.00	server=battleaxegaming
-parad0x			ipv4=94.130.64.196	ipv6=2a01:4f8:10b:2e6f::100		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> FFRL	capacity=1.00	server=hyperhost
-c1024			ipv4=176.9.88.123	ipv6=2a01:4f8:150:8ff8::5		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00
-fanlin			ipv4=5.199.135.168	ipv6=2001:4ba0:ffa4:3d2:5:199:135:168	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> BCKB	IPv6 -> BCKB	capacity=0.50
-des1			ipv4=5.9.86.154		ipv6=2a01:4f8:162:10d2::a0		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=deshyper-01
-remue-09		ipv4=148.251.208.170	ipv6=2a01:4f8:191:21e1::b0		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW  IPv6 -> BCKB	capacity=0.75	server=remue
-asterix                 ipv4=148.251.208.168    ipv6=2a01:4f8:191:21e1::168             ansible_ssh_host="{{ipv4}}"     ansible_ssh_port=22     # IPv4 -> BCKB  IPv6 -> BCKB    capacity=0.75   server=remue
-rowe			ipv4=78.46.85.237	ipv6=2a01:4f8:120:1395::cd		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=robweisor-01
-corny			ipv4=144.76.69.56	ipv6=2a01:4f8:191:8224::56		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> FFRL	capacity=1.00	server=hypercorn
-automatix		ipv4=46.4.80.184	ipv6=2a01:4f8:140:616e::82		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> BCKB	capacity=1.00	server=voyager
-hulk			ipv4=185.197.132.145	ipv6=2001:678:894:aa::2			ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> BCKB	capacity=1.00	server=goldelse
+##tj01			ipv4=176.9.176.92	ipv6=2a01:4f8:151:112b::4		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> BCKB	capacity=1.00	server=battleaxegaming
+##parad0x			ipv4=94.130.64.196	ipv6=2a01:4f8:10b:2e6f::100		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> FFRL	capacity=1.00	server=hyperhost
+##c1024			ipv4=176.9.88.123	ipv6=2a01:4f8:150:8ff8::5		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00
+##fanlin			ipv4=5.199.135.168	ipv6=2001:4ba0:ffa4:3d2:5:199:135:168	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> BCKB	IPv6 -> BCKB	capacity=0.50
+##des1			ipv4=5.9.86.154		ipv6=2a01:4f8:162:10d2::a0		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=deshyper-01
+##remue-09		ipv4=148.251.208.170	ipv6=2a01:4f8:191:21e1::b0		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW  IPv6 -> BCKB	capacity=0.75	server=remue
+##asterix                 ipv4=148.251.208.168    ipv6=2a01:4f8:191:21e1::168             ansible_ssh_host="{{ipv4}}"     ansible_ssh_port=22     # IPv4 -> BCKB  IPv6 -> BCKB    capacity=0.75   server=remue
+##rowe			ipv4=78.46.85.237	ipv6=2a01:4f8:120:1395::cd		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=robweisor-01
+##corny			ipv4=144.76.69.56	ipv6=2a01:4f8:191:8224::56		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> FFRL	capacity=1.00	server=hypercorn
+##automatix		ipv4=46.4.80.184	ipv6=2a01:4f8:140:616e::82		ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> BCKB	capacity=1.00	server=voyager
+##hulk			ipv4=185.197.132.145	ipv6=2001:678:894:aa::2			ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=22	# IPv4 -> FFNW	IPv6 -> BCKB	capacity=1.00	server=goldelse
 
 
 # Server zum bauen und bereitstellen der Firmware
 [firmwareserver]
-firmware		ansible_ssh_host=144.76.30.226		ansible_ssh_port=223
-build			ansible_ssh_host=2a03:2260:115:1000:215:17ff:fefd:4da4		ansible_ssh_port=22
+##firmware		ansible_ssh_host=144.76.30.226		ansible_ssh_port=223
+##build			ansible_ssh_host=2a03:2260:115:1000:215:17ff:fefd:4da4		ansible_ssh_port=22
 
 # Server der ein Monitoring mittels icinga zur verfügung stellt.
 [monitoring]
-icinga			ansible_ssh_host=148.251.208.173	ansible_ssh_port=22
+##icinga			ansible_ssh_host=148.251.208.173	ansible_ssh_port=22
 
 [monitoringsatellites]
-remue
+##remue
 #satellite-01		ansible_ssh_host=234.234.234.234	ansible_ssh_port=22
 
 [vipnodes]
