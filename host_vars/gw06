@@ -48,9 +48,9 @@ ffrl_tun:
 
 domaenenliste:
    "01":
-   dhcp_start: 10.86.8.25
-   dhcp_ende: 10.86.9.254
-   server_id: 6
+      dhcp_start: 10.86.8.25
+      dhcp_ende: 10.86.9.254
+      server_id: 6
 
 dhcp_type: "kea"
 
