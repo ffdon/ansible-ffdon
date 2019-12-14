@@ -46,12 +46,11 @@ ffrl_tun:
   v6_local: 2a03:2260:0:305::2/64
   v6_remote: 2a03:2260:0:305::1/64
 
-
 domaenenliste:
    "01":
    dhcp_start: 10.86.8.25
    dhcp_ende: 10.86.9.254
-   server_id: 2
+   server_id: 6
 
 dhcp_type: "kea"
 
