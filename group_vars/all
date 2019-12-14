@@ -55,11 +55,11 @@ logrotate:
   count: 3
 
 freifunk:
-  name: "Freifunk Münsterland"
-  kurzname: "ffms"
-  search_domain: "ffms"
-  email: info@freifunk-muensterland.de
-  domain: freifunk-muensterland.de
+  name: "Freifunk Donau Ries"
+  kurzname: "ffdon"
+  search_domain: "ffdonm"
+  email: info@freifunk-donau-ries.de
+  domain: freifunk-donau-ries.de
   ffnet_dns_entries_for_internal_tld:
     "firmware":
        A: 144.76.30.226
@@ -84,8 +84,8 @@ freifunk:
        AAAA: 2a03:2260:115:100:219:99ff:fea5:2746
 
 bind_zonemaster:
-  server: dnsmaster.freifunk-muensterland.de
-  email: info.freifunk-muensterland.de
+  server: dnsmaster.freifunk-donau-ries.de
+  email: info.freifunk-donau-ries.de
 
 dns_entries_for_all_tlds:
  - '@                                                IN  A       46.4.80.179'
@@ -154,13 +154,13 @@ dns_entries_for_all_tlds:
 
 
 domains:
-  "freifunk-muensterland.de":
+  "freifunk-donau-ries.de":
     extern_dns:
       - c1024
       - des1
       - fanlin
       - parad0x
-    email: info@freifunk-muensterland.de
+    email: info@freifunk-donau-ries.de
     dns_entries:
        - '_imap._tcp                                       IN  SRV     0 1 143 mail.freifunk-muensterland.de.'
        - '_imaps._tcp                                      IN  SRV     0 1 993 mail.freifunk-muensterland.de.'
@@ -188,14 +188,14 @@ domains:
        - 'dyndns                                           IN  NS      ns3.he.net.'
        - 'dyndns                                           IN  NS      ns4.he.net.'
        - 'dyndns                                           IN  NS      ns5.he.net.'
-  "freifunk-muenster.de":
+  "freifunk-donau-ries.de":
     extern_dns:
       - c1024
       - des1
       - fanlin
       - parad0x
     master_server:
-    email: info@freifunk-muenster.de
+    email: info@freifunk-donau-ries.de
     dns_entries:
       - '@                                                IN  TXT     "v=spf1 mx -all"'
       - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCq6uxLJ8WQj7WGgwJH5d7fIpmd1i6DfRV1QMIXy4LVIxwowMy+mAYGojnWoN6ZtMjhUYZLDIWPp2lK8qangynGdIYgE7iJ4HoeEYEoWbi4kgHhWtTlNRQg3+xT0MrKBBCZ707ifNWLpZ4pCwDVOmK5WyG5bG01+3wG4MXNN779swIDAQAB"'
@@ -203,13 +203,13 @@ domains:
       - '@                                                IN  TXT     "google-site-verification=ex-6A1f0RBIhAjoPEu_7WA7Rv1yVUmkMTdXT19SjBOw"'
       - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
       - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
-  "freifunk-muensterland.net":
+  "freifunk-donau-ries.net":
     extern_dns:
       - c1024
       - des1
       - fanlin
       - parad0x
-    email: info@freifunk-muensterland.net
+    email: info@freifunk-donau-ries.net
     dns_entries:
       - '@                                                IN  TXT     "v=spf1 mx -all"'
       - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKojQEPsoeauRUCMn+o80EIhaV/7XWZPc7eKFra7o3xQOTNBcNjjc2gNMD+hxLB6H9HDcU7c5HM66o/YU53VTrpOdXBvEkOJWIto/B6HuPxbIRsAMiRjbQUneMfZjgPzDcxOaRbB1OVRGSSPe92Oca3Q/bUSf2talLb8splvGnJwIDAQAB"'
@@ -217,13 +217,13 @@ domains:
       - '@                                                IN  TXT     "google-site-verification=SEIPNGVqGBu_d0AO-yCqj_MxLjO7aHOaIWzuq-fIyM4"'
       - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
       - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
-  "freifunk-muensterland.org":
+  "freifunk-donau-ries.org":
     extern_dns:
       - c1024
       - des1
       - fanlin
       - parad0x
-    email: info@freifunk-muensterland.org
+    email: info@freifunk-donau-ries.org
     dns_entries:
       - '@                                                IN  TXT     "v=spf1 mx -all"'
       - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCq6uxLJ8WQj7WGgwJH5d7fIpmd1i6DfRV1QMIXy4LVIxwowMy+mAYGojnWoN6ZtMjhUYZLDIWPp2lK8qangynGdIYgE7iJ4HoeEYEoWbi4kgHhWtTlNRQg3+xT0MrKBBCZ707ifNWLpZ4pCwDVOmK5WyG5bG01+3wG4MXNN779swIDAQAB"'
@@ -231,7 +231,7 @@ domains:
       - '@                                                IN  TXT     "google-site-verification=bbu3aMuoNu4n3J8GzZkcn4bT44SbVUoZOEQB7JEZKao"'
       - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
       - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
-  "ffmsl.de":
+  "ffdon.de":
     extern_dns:
       - c1024
       - des1
