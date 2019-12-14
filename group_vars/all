@@ -17,26 +17,6 @@ domaenen:
           id: "00:19:99:a5:27:46"
         - ip: "10.1.0.20" #Epson-Beamer in der Zone
           id: "38:9d:92:36:ca:04"
-        - ip: "10.10.64.10" #Buildserver
-          id: "00:15:17:fd:4d:a4"
-        - ip: "10.10.10.50" #FF-BOR-KPB-Switch-KG
-          id: "f0:9f:c2:0c:18:69"
-        - ip: "10.10.10.51" #FF-BOR-KPB-AP-Vorplatz
-          id: "78:8a:20:23:0e:96"
-        - ip: "10.10.10.52" #FF-BOR-KPB-AP-Innenhof
-          id: "f0:9f:c2:d0:ca:82"
-        - ip: "10.10.0.145" #Corny-1
-          id: "b8:27:eb:62:c5:ab"
-        - ip: "10.10.0.146" #Corny-2
-          id: "fc:ec:da:30:85:51"
-        - ip: "10.16.0.15" #Aircontrol
-          id: "52:54:00:CF:B2:FB"
-        - ip: "10.43.128.14"
-          id: "52:54:00:14:bb:9f"
-        - ip: "10.43.128.15"
-          id: "52:54:00:fe:68:0f"
-        - ip: "10.43.128.13"
-          id: "52:54:00:87:eb:c0"
   
 # Nummer der Routing Tabelle, die auf den Servern verwendet wird
 routing_table: 42
@@ -63,7 +43,7 @@ administratorenteam:
   - "mgk"
   - "uli"
   - "michael"
-  - "letty"
+#  - "letty"
 
 bind:
   ffnet_zone_type: slave
