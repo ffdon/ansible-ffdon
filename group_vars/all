@@ -41,6 +41,7 @@ ff_network:
 administratorenteam:
   - "mpw"
   - "mgk"
+  - "mgk2"
   - "uli"
   - "michael"
 #  - "letty"
