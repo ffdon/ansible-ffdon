@@ -2,15 +2,15 @@
 build_tunnels_over_ipv6_if_available: false
 
 domaenen:
-  "01":
-    name: Münster-Mitte-Süd
-    community: Münster
-    ffv4_network: 10.1.0.0/16
-    ffv6_network: 2a03:2260:115:100::/64
+  "51":
+    name: TEST
+    community: Donau-Ries
+    ffv4_network: 10.86.0.0/16
+    ffv6_network: 2a03:2260:115:5100::/64
     map_scale: 0.9
     map_show_contact: false
     map_max_age: 14
-    firmware: domaene01/
+    firmware: domaene51/
     dhcp:
       reservations:
         - ip: "10.1.0.15" #Streamrechner in der Zone
@@ -55,34 +55,16 @@ logrotate:
   count: 3
 
 freifunk:
-  name: "Freifunk Donau Ries"
+  name: "Freifunk Donau-Ries"
   kurzname: "ffdon"
-  search_domain: "ffdonm"
+  search_domain: "ffdon"
   email: info@freifunk-donau-ries.de
   domain: freifunk-donau-ries.de
   ffnet_dns_entries_for_internal_tld:
     "firmware":
        A: 144.76.30.226
        AAAA: 2a01:4f8:191:21e1::23
-    "unifi":
-       A: 10.43.128.14
-       AAAA: 2a03:2260:115:4300:5054:ff:fe14:bb9f
-    "unifi-legacy":
-       A: 10.43.128.15
-       AAAA: 2a03:2260:115:4300:5054:ff:fefe:680f
-    "aircontrol":
-       A: 10.16.0.15
-       AAAA: 2a03:2260:115:1600:5054:ff:fecf:b2fb
-    "build":
-       A: 10.10.64.10
-       AAAA: 2a03:2260:115:1000:215:17ff:fefd:4da4
-    "streamer":
-       A: 46.4.80.179
-       AAAA: 2a01:4f8:140:616e::85
-    "streambox":
-       A: 10.1.0.15
-       AAAA: 2a03:2260:115:100:219:99ff:fea5:2746
-
+    
 bind_zonemaster:
   server: dnsmaster.freifunk-donau-ries.de
   email: info.freifunk-donau-ries.de
@@ -90,76 +72,11 @@ bind_zonemaster:
 dns_entries_for_all_tlds:
  - '@                                                IN  A       46.4.80.179'
  - '@                                                IN  AAAA    2a01:4f8:140:616e::84'
- - 'www                                              IN  A       46.4.80.179'
- - 'www                                              IN  AAAA    2a01:4f8:140:616e::84'
- - 'karte                                            IN  A       46.4.80.190'
- - 'karte                                            IN  AAAA    2a01:4f8:140:616e::83'
- - 'mail                                             IN  A       148.251.208.169'
- - 'mail                                             IN  AAAA    2a01:4f8:191:21e1::af'
- - 'dav                                              IN  A       148.251.208.169'
- - 'dav                                              IN  AAAA    2a01:4f8:191:21e1::af'
- - 'discover                                         IN  A       148.251.208.169'
- - 'discover                                         IN  AAAA    2a01:4f8:191:21e1::af'
- - 'autodiscover                                     IN  A       148.251.208.169'
- - 'autodiscover                                     IN  AAAA    2a01:4f8:191:21e1::af'
- - 'autoconfig                                       IN  A       148.251.208.169'
- - 'autoconfig                                       IN  AAAA    2a01:4f8:191:21e1::af'
- - 'firmware                                         IN  A       144.76.30.226'
- - 'firmware                                         IN  AAAA    2a01:4f8:191:21e1::23'
- - 'assistent                                        IN  A       144.76.30.226'
- - 'assistent                                        IN  AAAA    2a01:4f8:191:21e1::23'
- - 'forum                                            IN  A       148.251.208.171'
- - 'forum                                            IN  AAAA    2a01:4f8:191:21e1::b1'
- - 'wiki                                             IN  A       5.9.86.142'
- - 'wiki                                             IN  AAAA    2a01:4f8:162:10d2::a1'
- - 'smtp                                             IN  CNAME   mail.freifunk-muensterland.de.'
- - 'imap                                             IN  CNAME   mail.freifunk-muensterland.de.'
- - 'pop                                              IN  CNAME   mail.freifunk-muensterland.de.'
- - 'ticket                                           IN  A       5.9.86.151'
- - 'ticket                                           IN  AAAA    2a01:4f8:162:10d2::3'
- - 'icinga                                           IN  A       148.251.208.173'
- - 'icinga                                           IN  AAAA    2a01:4f8:191:21e1::b3'
- - 'unifi                                            IN  A       5.9.86.151'
- - 'unifi                                            IN  AAAA    2a03:2260:115:4300:5054:ff:fe14:bb9f'
- - 'unifi-legacy                                     IN  A       46.4.80.179'
- - 'unifi-legacy                                     IN  AAAA    2a03:2260:115:4300:5054:ff:fefe:680f'
- - 'stats                                            IN  A       185.197.132.146'
- - 'grafana                                          IN  A       185.197.132.146'
- - 'graphite                                         IN  A       185.197.132.146'
- - 'node-stats                                       IN  A       185.197.132.146'
- - 'dnsmaster                                        IN  A       176.9.38.163'
- - 'dnsmaster                                        IN  AAAA    2a01:4f8:150:4486::a5'
- - 'build                                            IN  AAAA    2a03:2260:115:1000:215:17ff:fefd:4da4'
- - 'mumble                                           IN  A       46.4.80.179'
- - 'streamer                                         IN  A       46.4.80.179'
- - 'streamer                                         IN  AAAA    2a01:4f8:140:616e::85'
- - 'streambox                                        IN  AAAA    2a03:2260:115:100:219:99ff:fea5:2746'
- - 'ansible                                          IN  A       46.4.80.179'
- - 'ansible                                          IN  AAAA    2a01:4f8:140:616e::86'
- - 'faa-vm-backup                                    IN  AAAA    2a03:2260:115:100:5054:ff:fe73:a614'
- - 'lafp-vm-backup                                   IN  AAAA    2a03:2260:115:400:5054:ff:fe96:b854'
- - 'aircontrol                                       IN  AAAA    2a03:2260:115:1600:5054:ff:fecf:b2fb'
- - 'zulip                                            IN  A       46.4.80.186'
- - 'zulip                                            IN  AAAA    2a01:4f8:140:616e::88'
- - 'ldap                                             IN  AAAA    2a01:4f8:162:10d2::a2'
- - 'fredbackend                                      IN  A       159.69.223.64'
- - 'fredbackend                                      IN  AAAA    2a01:4f8:1c1c:8987::1'
- - 'meshviewer                                       IN  A       78.46.117.231'
- - 'meshviewer                                       IN  AAAA    2a01:4f8:1c0c:6b7e::1'
- - 'beamer                                           IN  A       10.1.0.20'
- - 'projekt                                          IN  A       176.9.38.158'
- - 'projekt                                          IN  AAAA    2a01:4f8:150:4486::72'
- - 'nextcloud                                        IN  A       185.197.132.147'
- - 'nextcloud                                        IN  AAAA    2001:678:894:aa::4'
-
-
+ 
 domains:
   "freifunk-donau-ries.de":
     extern_dns:
-      - c1024
-      - des1
-      - fanlin
-      - parad0x
+      - gw06
     email: info@freifunk-donau-ries.de
     dns_entries:
        - '_imap._tcp                                       IN  SRV     0 1 143 mail.freifunk-muensterland.de.'
@@ -188,78 +105,4 @@ domains:
        - 'dyndns                                           IN  NS      ns3.he.net.'
        - 'dyndns                                           IN  NS      ns4.he.net.'
        - 'dyndns                                           IN  NS      ns5.he.net.'
-  "freifunk-donau-ries.de":
-    extern_dns:
-      - c1024
-      - des1
-      - fanlin
-      - parad0x
-    master_server:
-    email: info@freifunk-donau-ries.de
-    dns_entries:
-      - '@                                                IN  TXT     "v=spf1 mx -all"'
-      - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCq6uxLJ8WQj7WGgwJH5d7fIpmd1i6DfRV1QMIXy4LVIxwowMy+mAYGojnWoN6ZtMjhUYZLDIWPp2lK8qangynGdIYgE7iJ4HoeEYEoWbi4kgHhWtTlNRQg3+xT0MrKBBCZ707ifNWLpZ4pCwDVOmK5WyG5bG01+3wG4MXNN779swIDAQAB"'
-      - '_dmarc                                           IN  TXT     "v=DMARC1; p=reject; rua=mailto:mailauth-reports@freifunk-muensterland.de"'
-      - '@                                                IN  TXT     "google-site-verification=ex-6A1f0RBIhAjoPEu_7WA7Rv1yVUmkMTdXT19SjBOw"'
-      - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
-      - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
-  "freifunk-donau-ries.net":
-    extern_dns:
-      - c1024
-      - des1
-      - fanlin
-      - parad0x
-    email: info@freifunk-donau-ries.net
-    dns_entries:
-      - '@                                                IN  TXT     "v=spf1 mx -all"'
-      - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKojQEPsoeauRUCMn+o80EIhaV/7XWZPc7eKFra7o3xQOTNBcNjjc2gNMD+hxLB6H9HDcU7c5HM66o/YU53VTrpOdXBvEkOJWIto/B6HuPxbIRsAMiRjbQUneMfZjgPzDcxOaRbB1OVRGSSPe92Oca3Q/bUSf2talLb8splvGnJwIDAQAB"'
-      - '_dmarc                                           IN  TXT     "v=DMARC1; p=reject; rua=mailto:mailauth-reports@freifunk-muensterland.de"'
-      - '@                                                IN  TXT     "google-site-verification=SEIPNGVqGBu_d0AO-yCqj_MxLjO7aHOaIWzuq-fIyM4"'
-      - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
-      - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
-  "freifunk-donau-ries.org":
-    extern_dns:
-      - c1024
-      - des1
-      - fanlin
-      - parad0x
-    email: info@freifunk-donau-ries.org
-    dns_entries:
-      - '@                                                IN  TXT     "v=spf1 mx -all"'
-      - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCq6uxLJ8WQj7WGgwJH5d7fIpmd1i6DfRV1QMIXy4LVIxwowMy+mAYGojnWoN6ZtMjhUYZLDIWPp2lK8qangynGdIYgE7iJ4HoeEYEoWbi4kgHhWtTlNRQg3+xT0MrKBBCZ707ifNWLpZ4pCwDVOmK5WyG5bG01+3wG4MXNN779swIDAQAB"'
-      - '_dmarc                                           IN  TXT     "v=DMARC1; p=reject; rua=mailto:mailauth-reports@freifunk-muensterland.de"'
-      - '@                                                IN  TXT     "google-site-verification=bbu3aMuoNu4n3J8GzZkcn4bT44SbVUoZOEQB7JEZKao"'
-      - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
-      - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
-  "ffdon.de":
-    extern_dns:
-      - c1024
-      - des1
-      - fanlin
-      - parad0x
-    email: info@ffmsl.de
-    dns_entries:
-      - '@                                                IN  TXT     "v=spf1 mx -all"'
-      - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVLreaCsqKEMXkzclNvwKeHAGZi1rI+AWkb16U0IjeuMPsF0rGou8p/ypMMtsuf3nFdaruvf/xB/8o6WH+UiRxKsNPRIZwYWB1EALuWPaiWWYUlo3j7hQT/9TBVWec96n8zW8FwS3KcBojZge8w7MNpJJ4fTbfBo2HnJMcsvj7IQIDAQAB"'
-      - '_dmarc                                           IN  TXT     "v=DMARC1; p=reject; rua=mailto:mailauth-reports@freifunk-muensterland.de"'
-      - '@                                                IN  TXT     "google-site-verification=BPJo0QNmezQuWNKUVTQY7z_GuGrGkW1Nl1CMmjQFM4I"'
-      - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
-      - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
-      - 'zulip                                            IN  MX 10   mail.freifunk-muensterland.de.'
-      - 'zulip                                            IN  TXT     "v=spf1 mx a a:mail.freifunk-muensterland.de ~all"'
-      - 'default._domainkey.zulip                         IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQZIftyMw8bVqzP5ecw3818wJze3c9V3HITktC/RvD4Kv54VBsDtDHKoAISiNeLJfHch7cd8/O/9PaLYku5iCyxN5i8zqO84Jm1kvrZ8fSXzVNa3nJbU9cSRC6amx+X3Q372HcCCv7pNolBjnTXK2Pe9DEQclbT/8knYgY78xeiQIDAQAB"'
-      - '_dmarc.zulip                                     IN  TXT     "v=DMARC1; p=reject; rua=mailto:mailauth-reports@freifunk-muensterland.de"'
-  "infrastruktur.ms":
-    extern_dns:
-      - c1024
-      - des1
-      - fanlin
-      - parad0x
-    email: info@infrastruktur.ms
-    dns_entries:
-      - '@                                                IN  TXT     "v=spf1 mx -all"'
-      - 'default._domainkey                               IN  TXT     "v=DKIM1;k=rsa;t=s;s=email;p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLluAzK6Ko/xWHCYM2AYKB1JBcSOpZTObLPXnELmJFvMyxkIrdDUr76IddKTl8FmjBFJ+tYiy8TXbGa4QXqlp8TAgr/Anz8u0gDlrhdLtvVpsyin3lGv4nriGcwaxEbTX7UHqF68sh6RPATJpTnk2aoZC/mw4cdksxkb0g8FueJQIDAQAB"'
-      - '_dmarc                                           IN  TXT     "v=DMARC1; p=reject; rua=mailto:mailauth-reports@freifunk-muensterland.de"'
-      - '@                                                IN  TXT     "google-site-verification=u5yvcYZGB1MK4b8Fh7pQo-7A4bITqyLoIEjhTPBWqmo"'
-      - '@                                                IN  MX 10   mail.freifunk-muensterland.de.'
-      - 'dyndns                                           IN  DNAME   dyndns.freifunk-muensterland.de.'
+ 
