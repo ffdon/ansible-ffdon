@@ -1,3 +1,4 @@
 [submodule "roles"]
 	path = roles
-	url = git@github.com:FreiFunkMuenster/Ansible-Freifunk-Gateway.git
+	url = git@github.com:ffdon/Ansible-Freifunk-Gateway-roles.git
+	branch = master
